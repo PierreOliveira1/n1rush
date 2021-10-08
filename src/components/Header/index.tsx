@@ -169,7 +169,7 @@ const Header = (): JSX.Element => {
 					<Button
 						type="icon"
 						icon={Logo}
-						width={width < 700 ? '107px' : undefined}
+						widthIcon={width < 700 ? '107px' : 'auto'}
 					/>
 				</SpaceOne>
 				<SpaceTwo>

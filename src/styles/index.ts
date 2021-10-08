@@ -24,7 +24,9 @@ export const Box = styled.div<{
 	flexDirection?: string;
 	position?: string;
 	top?: string;
+	bottom?: string;
 	left?: string;
+	right?: string;
 	borderRadius?: string;
 	backgroundColor?: string;
 	marginTop?: string;
@@ -40,6 +42,7 @@ export const Box = styled.div<{
 	animationFillMode?: string;
 	animationDirection?: string;
 	zIndex?: string;
+	opacity?: string;
 }>`
 	width: ${({ width }) => width || 'auto'};
 	height: ${({ height }) => height || 'auto'};
@@ -50,7 +53,9 @@ export const Box = styled.div<{
 	flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
 	position: ${({ position }) => position || 'initial'};
 	top: ${({ top }) => top || 'none'};
+	bottom: ${({ bottom }) => bottom || 'none'};
 	left: ${({ left }) => left || 'none'};
+	right: ${({ right }) => right || 'none'};
 	border-radius: ${({ borderRadius }) => borderRadius || '0px'};
 	background-color: ${({ backgroundColor }) => backgroundColor || 'none'};
 	padding-left: ${({ paddingLeft }) => paddingLeft || '0px'};
@@ -68,6 +73,7 @@ export const Box = styled.div<{
 	animation-direction: ${({ animationDirection }) =>
 		animationDirection || 'normal'};
 	z-index: ${({ zIndex }) => zIndex || 'none'};
+	opacity: ${({ opacity }) => opacity || '1'};
 `;
 
 export const Text = styled.p<{
@@ -79,11 +85,15 @@ export const Text = styled.p<{
 	marginBottom?: string;
 	marginLeft?: string;
 	textAlign?: string;
+	rotate?: string;
 	animationName?: Keyframes;
 	animationDuration?: string;
 	animationDelay?: string;
 	animationFillMode?: string;
 	animationDirection?: string;
+	writingMode?: string;
+	textOrientation?: string;
+	lineHeight?: string;
 }>`
 	font-family: ${({ fontFamily }) => fontFamily || 'Roboto, sans-serif'};
 	font-size: ${({ fontSize }) => fontSize || '14px'};
@@ -93,6 +103,7 @@ export const Text = styled.p<{
 	margin-top: ${({ marginTop }) => marginTop || '0px'};
 	margin-bottom: ${({ marginBottom }) => marginBottom || '0px'};
 	margin-left: ${({ marginLeft }) => marginLeft || '0px'};
+	transform: rotate(${({ rotate }) => rotate || '0deg'});
 	animation-name: ${({ animationName }) => animationName || 'none'};
 	animation-duration: ${({ animationDuration }) => animationDuration || '0ms'};
 	animation-delay: ${({ animationDelay }) => animationDelay || '0ms'};
@@ -100,6 +111,9 @@ export const Text = styled.p<{
 		animationFillMode || 'none'};
 	animation-direction: ${({ animationDirection }) =>
 		animationDirection || 'normal'};
+	writing-mode: ${({ writingMode }) => writingMode || 'none'};
+	text-orientation: ${({ textOrientation }) => textOrientation || 'none'};
+	line-height: ${({ lineHeight }) => lineHeight || 'none'};
 `;
 
 export const Line = styled.hr<{
@@ -114,7 +128,22 @@ export const Line = styled.hr<{
 	border-radius: ${({ borderRadius }) => borderRadius || '0px'};
 `;
 
-export const Image = styled.img`
-	width: 100%;
-	height: auto;
+export const Image = styled.img<{
+	width?: string;
+	height?: string;
+	animationName?: Keyframes;
+	animationDuration?: string;
+	animationDelay?: string;
+	animationFillMode?: string;
+	animationDirection?: string;
+}>`
+	width: ${({ width }) => width || '100%'};
+	height: ${({ height }) => height || 'auto'};
+	animation-name: ${({ animationName }) => animationName || 'none'};
+	animation-duration: ${({ animationDuration }) => animationDuration || '0ms'};
+	animation-delay: ${({ animationDelay }) => animationDelay || '0ms'};
+	animation-fill-mode: ${({ animationFillMode }) =>
+		animationFillMode || 'none'};
+	animation-direction: ${({ animationDirection }) =>
+		animationDirection || 'normal'};
 `;
