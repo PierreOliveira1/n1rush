@@ -36,7 +36,11 @@
 		],
 		"no-use-before-define": "off",
 		"@typescript-eslint/no-use-before-define": ["error"],
-		"import/prefer-default-export": "off"
+		"import/prefer-default-export": "off",
+		"react/prop-types": "off",
+		"react/require-default-props": "off",
+		"indent": "off",
+		"prettier/prettier": [2, { "useTabs": true }]
 	},
 	"settings": {
 		"import/resolver": {
