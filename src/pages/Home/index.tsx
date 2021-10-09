@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Slider from '../../components/Slider';
+import Footer from '../../components/Footer';
 
 // Styles
 import { Container } from '../../styles';
@@ -14,6 +15,7 @@ const Home = (): JSX.Element => {
 			<Header />
 			<Slider />
 			<Section />
+			<Footer />
 		</Container>
 	);
 };
