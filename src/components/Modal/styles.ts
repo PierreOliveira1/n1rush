@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const ContainerModal = styled.div`
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	top: 0;
+	bottom: 0;
 	left: 0;
 	background-color: #0841549e;
 	opacity: 0.62;

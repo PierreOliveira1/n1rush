@@ -23,6 +23,7 @@ type Props = {
 	position?: string;
 	top?: string;
 	right?: string;
+	left?: string;
 	marginBottom?: string;
 	onClick?: MouseEventHandler;
 	className?: string;
@@ -53,6 +54,7 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
 			alignItems,
 			position,
 			top,
+			left,
 			right,
 			marginBottom,
 			onClick,
@@ -77,6 +79,7 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
 					alignItems={alignItems}
 					position={position}
 					top={top}
+					left={left}
 					right={right}
 					marginBottom={marginBottom}
 					onClick={onClick}

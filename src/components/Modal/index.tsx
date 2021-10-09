@@ -10,6 +10,9 @@ import Button from '../Button';
 // Assets
 import IconClose from '../../assets/svgs/close_btn.svg';
 
+// Hooks
+import useWindowSize from '../../utils/useWindowSize';
+
 type Props = {
 	children?: ReactNode;
 	setState?: Dispatch<SetStateAction<boolean>>;
@@ -27,8 +30,17 @@ const Modal = ({
 	alignItems,
 	flexDirection,
 }: Props): JSX.Element => {
+	const [width] = useWindowSize();
+
 	return (
-		<Box>
+		<Box
+			width="100%"
+			height={width > 700 ? '120vmax' : '230vmax'}
+			position="absolute"
+			top="0"
+			right="0"
+			zIndex="99"
+		>
 			<ContainerModal />
 			<ContentModal
 				display={display}

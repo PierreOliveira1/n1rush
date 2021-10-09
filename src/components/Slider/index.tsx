@@ -78,8 +78,8 @@ const Slider = (): JSX.Element => {
 						>
 							<Image width="100%" src={width > 700 ? desktop : mobile} />
 							<Box
-								width={width > 700 ? '100vw' : '100%'}
-								height={width > 700 ? '100vh' : '50%'}
+								width="100%"
+								height={width > 700 ? '91.5vh' : '50%'}
 								position="absolute"
 								left={width > 700 ? '0' : 'none'}
 								top={width > 700 ? '0' : 'none'}

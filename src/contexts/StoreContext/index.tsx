@@ -1,16 +1,16 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react';
 
-type StoreTypes = {
-	store?: number;
-	setStore?: (e: number) => void;
+export type StoreTypes = {
+	store?: any;
+	setStore?: any;
 };
 
-const Store = createContext<StoreTypes>({
+export const Store = createContext<StoreTypes>({
 	store: 0,
-	setStore: e => e,
+	setStore: () => {},
 });
 
-export const useStoreContext = (): StoreTypes => useContext(Store);
+export const useStoreContext = () => useContext<StoreTypes>(Store);
 
 type Props = {
 	children?: ReactNode;

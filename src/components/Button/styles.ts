@@ -8,6 +8,7 @@ export const ButtonIcon = styled.a<{
 	alignItems?: string;
 	position?: string;
 	top?: string;
+	left?: string;
 	right?: string;
 	marginBottom?: string;
 	animationName?: Keyframes;
@@ -26,6 +27,7 @@ export const ButtonIcon = styled.a<{
 	align-items: ${({ alignItems }) => alignItems || 'center'};
 	position: ${({ position }) => position || 'initial'};
 	top: ${({ top }) => top || 'none'};
+	left: ${({ left }) => left || 'none'};
 	right: ${({ right }) => right || 'none'};
 	margin-bottom: ${({ marginBottom }) => marginBottom || '0px'};
 	animation-name: ${({ animationName }) => animationName || 'none'};
