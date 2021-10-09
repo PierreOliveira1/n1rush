@@ -1,3 +1,6 @@
+# Attention!
+Before starting the project with Yarn Start you need to create a .env file written SKIP_PREFLIGHT_CHECK=true so you do not give errors.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
