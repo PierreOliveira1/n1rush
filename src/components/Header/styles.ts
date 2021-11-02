@@ -162,11 +162,48 @@ export const Triangle = styled.div<{
 	border-bottom: 16.37px solid #3ec6e0;
 `;
 
-export const Input = styled.input`
-	width: 90%;
-	height: 30px;
+export const Form = styled.form`
+	width: 80%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5%;
+`;
+
+export const Input = styled.input<{
+	width?: string;
+	height?: string;
+	border?: string;
+	borderRadius?: string;
+	placeholderColor?: string;
+	paddingLeft?: string;
+	marginTop?: string;
+}>`
+	width: ${({ width }) => width || '90%'};
+	height: ${({ height }) => height || '35px'};
 	outline: none;
-	border: none;
+	border: ${({ border }) => border || 'none'};
+	border-radius: ${({ borderRadius }) => borderRadius || 'none'};
+	padding-left: ${({ paddingLeft }) => paddingLeft || '0'};
+	margin-top: ${({ marginTop }) => marginTop || '0'};
 	background: none;
 	font-family: 'Roboto', sans-serif;
+
+	&::placeholder {
+		color: ${({ placeholderColor }) => placeholderColor || '#343434'};
+	}
+`;
+
+export const Textarea = styled.textarea`
+	width: 100%;
+	height: 12rem;
+	outline: none;
+	border: 2px solid #343434;
+	border-radius: 10px;
+	padding: 2%;
+	margin-top: 2%;
+
+	&::placeholder {
+		color: #343434;
+	}
 `;

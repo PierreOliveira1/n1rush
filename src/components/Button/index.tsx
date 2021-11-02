@@ -16,6 +16,8 @@ type Props = {
 	fontFamily?: string;
 	fontSize?: string;
 	color?: string;
+	backgroundColor?: string;
+	backgroundColorHover?: string;
 	weight?: string;
 	display?: string;
 	justifyContent?: string;
@@ -24,7 +26,9 @@ type Props = {
 	top?: string;
 	right?: string;
 	left?: string;
+	marginTop?: string;
 	marginBottom?: string;
+	paddingLeft?: string;
 	onClick?: MouseEventHandler;
 	className?: string;
 	animationName?: Keyframes;
@@ -48,6 +52,8 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
 			fontFamily,
 			fontSize,
 			color,
+			backgroundColor,
+			backgroundColorHover,
 			weight,
 			display,
 			justifyContent,
@@ -56,7 +62,9 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
 			top,
 			left,
 			right,
+			marginTop,
 			marginBottom,
+			paddingLeft,
 			onClick,
 			className,
 			animationName,
@@ -109,13 +117,22 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
 		return (
 			<ButtonContent
 				ref={ref}
+				width={width}
+				height={height}
+				justifyContent={justifyContent}
+				paddingLeft={paddingLeft}
+				background={backgroundColor}
+				backgroundHover={backgroundColorHover}
 				animationName={animationName}
 				animationDuration={animationDuration}
 				animationDelay={animationDelay}
 				animationFillMode={animationFillMode}
+				marginTop={marginTop}
 				marginBottom={marginBottom}
 			>
-				<Text weight="400">{label}</Text>
+				<Text color={color} weight="400">
+					{label}
+				</Text>
 			</ButtonContent>
 		);
 	},

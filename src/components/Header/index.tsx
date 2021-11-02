@@ -7,7 +7,9 @@ import {
 	ContainerMenu,
 	Content,
 	ContentMenu,
+	Form,
 	Input,
+	Textarea,
 	SpaceOne,
 	SpaceTwo,
 	Triangle,
@@ -33,8 +35,6 @@ import IconSearch from '../../assets/svgs/search-solid.svg';
 import IconStore from '../../assets/svgs/shopping-bag-solid.svg';
 import IconClose from '../../assets/svgs/icon_hamburguer_close.svg';
 import IconInputClose from '../../assets/svgs/icon_input_close.svg';
-import IconInstagram from '../../assets/svgs/icons8-instagram.svg';
-import IconGitHub from '../../assets/svgs/icons8-github.svg';
 
 // Hooks
 import useWindowSize from '../../utils/useWindowSize';
@@ -306,36 +306,43 @@ const Header = (): JSX.Element => {
 				>
 					<Text
 						marginTop="3rem"
-						marginBottom="6rem"
+						marginBottom="4rem"
 						weight="900"
-						fontSize="16px"
+						fontSize="20px"
 						color="#000000"
 					>
-						Meios de contato
+						Contato
 					</Text>
-					<Button
-						type="icon"
-						icon={IconInstagram}
-						label="pierre_salvatore"
-						width="50px"
-						height="50px"
-						color="#000"
-						weight="700"
-						href="https://instagram.com/pierre_salvatore"
-						target="_blank"
-						marginBottom="1rem"
-					/>
-					<Button
-						type="icon"
-						icon={IconGitHub}
-						label="PierreOliveira1"
-						widthIcon="50px"
-						heightIcon="50px"
-						color="#000"
-						weight="700"
-						href="https://github.com/PierreOliveira1"
-						target="_blank"
-					/>
+					<Form>
+						<Input
+							type="text"
+							placeholder="Name..."
+							width="100%"
+							border="2px solid #343434"
+							borderRadius="5px"
+							paddingLeft="2%"
+						/>
+						<Input
+							type="text"
+							placeholder="E-mail..."
+							width="100%"
+							border="2px solid #343434"
+							borderRadius="5px"
+							paddingLeft="2%"
+							marginTop="2%"
+						/>
+						<Textarea placeholder="Mensagem..." />
+						<Button
+							width="40%"
+							height="2rem"
+							justifyContent="center"
+							paddingLeft="0"
+							marginTop="5%"
+							backgroundColor="#343434"
+							label="Enviar"
+							color="#FFFFFF"
+						/>
+					</Form>
 				</Modal>
 			)}
 		</>

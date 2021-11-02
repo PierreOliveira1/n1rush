@@ -49,21 +49,30 @@ export const Icon = styled.img<{
 `;
 
 export const ButtonContent = styled.a<{
+	width?: string;
+	height?: string;
+	justifyContent?: string;
+	background?: string;
+	backgroundHover?: string;
+	marginTop?: string;
 	marginBottom?: string;
+	paddingLeft?: string;
 	animationName?: Keyframes;
 	animationDuration?: string;
 	animationDelay?: string;
 	animationFillMode?: string;
 }>`
-	width: 100%;
-	height: 30px;
+	width: ${({ width }) => width || '100%'};
+	height: ${({ height }) => height || '30px'};
 	display: flex;
+	justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
 	align-items: center;
-	padding-left: 10px;
+	padding-left: ${({ paddingLeft }) => paddingLeft || '10px'};
+	margin-top: ${({ marginTop }) => marginTop || '0px'};
 	margin-bottom: ${({ marginBottom }) => marginBottom || '0px'};
 	border-radius: 5px;
 	transition: background 500ms;
-	background: none;
+	background: ${({ background }) => background || 'none'};
 	cursor: pointer;
 	outline: none;
 	border: none;
@@ -74,6 +83,6 @@ export const ButtonContent = styled.a<{
 		animationFillMode || 'none'};
 
 	&:hover {
-		background-color: #3ec6e0;
+		background-color: ${({ backgroundHover }) => backgroundHover || '#3ec6e0'};
 	}
 `;
