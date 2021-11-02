@@ -1,7 +1,12 @@
-import React, { Dispatch, ReactNode, SetStateAction } from 'react';
+import React, {
+	Dispatch,
+	ReactNode,
+	SetStateAction,
+	useEffect,
+	useRef,
+} from 'react';
 
 // Styles
-import { Box } from '../../styles';
 import { ContainerModal, ContentModal } from './styles';
 
 // Components
@@ -9,9 +14,6 @@ import Button from '../Button';
 
 // Assets
 import IconClose from '../../assets/svgs/close_btn.svg';
-
-// Hooks
-import useWindowSize from '../../utils/useWindowSize';
 
 type Props = {
 	children?: ReactNode;
@@ -30,18 +32,18 @@ const Modal = ({
 	alignItems,
 	flexDirection,
 }: Props): JSX.Element => {
-	const [width] = useWindowSize();
+	const modalRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const div = modalRef.current;
+		if (div)
+			div.addEventListener('click', e => {
+				if (e.target === div && setState) setState(false);
+			});
+	}, [modalRef]);
 
 	return (
-		<Box
-			width="100%"
-			height={width > 700 ? '120vmax' : '230vmax'}
-			position="absolute"
-			top="0"
-			right="0"
-			zIndex="99"
-		>
-			<ContainerModal />
+		<ContainerModal ref={modalRef}>
 			<ContentModal
 				display={display}
 				justifyContent={justifyContent}
@@ -62,7 +64,7 @@ const Modal = ({
 				/>
 				{children}
 			</ContentModal>
-		</Box>
+		</ContainerModal>
 	);
 };
 
