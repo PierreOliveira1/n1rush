@@ -54,25 +54,20 @@ const Header = (): JSX.Element => {
 
 	useEffect(() => {
 		const menu = () => {
-			if (
-				isMenu &&
-				containerMenu &&
-				containerMenu.current &&
-				boxMenu &&
-				boxMenu.current
-			) {
-				containerMenu.current.style.display = 'block';
-				boxMenu.current.style.display = 'flex';
+			document.documentElement.style.overflow = isMenu ? 'hidden' : 'auto';
+			const divContainerMenu = containerMenu.current;
+			const divBoxMenu = boxMenu.current;
+			if (isMenu && divContainerMenu && divBoxMenu) {
+				divContainerMenu.style.display = 'block';
+				divBoxMenu.style.display = 'flex';
+				divContainerMenu.addEventListener('click', e => {
+					if (e.target === divContainerMenu) setIsMenu(false);
+				});
 			} else {
 				setTimeout(() => {
-					if (
-						containerMenu &&
-						containerMenu.current &&
-						boxMenu &&
-						boxMenu.current
-					) {
-						containerMenu.current.style.display = 'none';
-						boxMenu.current.style.display = 'none';
+					if (divContainerMenu && divBoxMenu) {
+						divContainerMenu.style.display = 'none';
+						divBoxMenu.style.display = 'none';
 					}
 				}, 700);
 			}
@@ -164,7 +159,9 @@ const Header = (): JSX.Element => {
 					<Button
 						type="icon"
 						icon={width <= 700 && isMenu ? IconClose : IconMenu}
-						onClick={() => setIsMenu(!isMenu)}
+						onClick={() => {
+							setIsMenu(!isMenu);
+						}}
 					/>
 					<Button
 						type="icon"
@@ -219,7 +216,7 @@ const Header = (): JSX.Element => {
 						position="relative"
 					>
 						<Button type="icon" icon={IconStore} />
-						{store > 0 && (
+						{store && (
 							<Box
 								width="23px"
 								height="23px"

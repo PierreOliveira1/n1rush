@@ -28,7 +28,7 @@ const Card = ({
 			flexDirection="column"
 			marginBottom={marginBottom}
 			marginRight={marginRight}
-			zIndex="10"
+			zIndex="1"
 			borderRadius="5px"
 		>
 			<Image width="100%" src={image} borderRadius="5px 5px 0px 0px" />

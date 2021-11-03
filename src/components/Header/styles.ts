@@ -16,7 +16,7 @@ export const Content = styled.div`
 	align-items: center;
 	position: absolute;
 	top: 5%;
-	z-index: 2;
+	z-index: 3;
 
 	@media (max-width: 1200px) {
 		width: 80%;
@@ -82,27 +82,12 @@ export const SpaceTwo = styled.div`
 
 export const ContainerMenu = styled.div`
 	display: none;
-	position: absolute;
-	top: 14%;
-	left: 16%;
-	z-index: 1;
-
-	@media (max-width: 1200px) {
-		left: 8.5%;
-	}
-
-	@media (max-width: 1000px) {
-		left: 3%;
-	}
-
-	@media (max-width: 900px) {
-		left: 2%;
-	}
-
-	@media (max-width: 700px) {
-		top: 0;
-		left: 0;
-	}
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
 `;
 
 export const ContentMenu = styled.div<{
@@ -110,6 +95,9 @@ export const ContentMenu = styled.div<{
 }>`
 	width: 33rem;
 	height: 250px;
+	position: absolute;
+	top: 14%;
+	left: 16%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -132,6 +120,23 @@ export const ContentMenu = styled.div<{
 		border-radius: 0px;
 		animation-name: ${({ animation }) =>
 			animation ? menuOpenMobile : menuCloseMobile || 'none'};
+	}
+
+	@media (max-width: 1200px) {
+		left: 8.5%;
+	}
+
+	@media (max-width: 1000px) {
+		left: 3%;
+	}
+
+	@media (max-width: 900px) {
+		left: 2%;
+	}
+
+	@media (max-width: 700px) {
+		top: 0;
+		left: 0;
 	}
 `;
 
