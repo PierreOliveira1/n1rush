@@ -27,8 +27,7 @@ export const Content = styled.div`
 	}
 
 	@media (max-width: 900px) {
-		width: 100%;
-		padding: 0px 4%;
+		width: 100;
 	}
 
 	@media (max-width: 500px) and (min-width: 300px) {

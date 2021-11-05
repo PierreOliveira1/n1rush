@@ -185,7 +185,55 @@ const Header = (): JSX.Element => {
 						weight="500"
 						onClick={() => setIsInput(!isInput)}
 					/>
+					{width > 900 && (
+						<Box
+							height="35px"
+							display="flex"
+							alignItems="center"
+							justifyContent="space-around"
+							position="absolute"
+							backgroundColor="#FFFFFF"
+							zIndex="4"
+							borderRadius="5px"
+							animationName={isInput ? inputOpen : inputClose}
+							animationDuration="300ms"
+							animationFillMode="both"
+						>
+							<Input placeholder="Pesquise aqui..." />
+							<Button
+								ref={iconInputCloseRef}
+								type="icon"
+								icon={IconInputClose}
+								widthIcon="20px"
+								heightIcon="20px"
+								onClick={() => setIsInput(!isInput)}
+							/>
+						</Box>
+					)}
+					{width > 800 && <Line height="30px" />}
+					<Box display="flex" alignItems="flex-end" position="relative">
+						<Button type="icon" icon={IconStore} />
+						{store && (
+							<Box
+								width="23px"
+								height="23px"
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								backgroundColor="#3EC6E0"
+								borderRadius="50%"
+								marginLeft=".2rem"
+								position={width <= 700 ? 'absolute' : undefined}
+								left="65%"
+							>
+								<Text weight="900">{store}</Text>
+							</Box>
+						)}
+					</Box>
+				</SpaceTwo>
+				{width <= 900 && (
 					<Box
+						width="100%"
 						height="35px"
 						display="flex"
 						alignItems="center"
@@ -208,32 +256,7 @@ const Header = (): JSX.Element => {
 							onClick={() => setIsInput(!isInput)}
 						/>
 					</Box>
-					{width > 800 && <Line height="30px" />}
-					<Box
-						display="flex"
-						alignItems="flex-end"
-						marginRight={width <= 700 ? '10%' : undefined}
-						position="relative"
-					>
-						<Button type="icon" icon={IconStore} />
-						{store && (
-							<Box
-								width="23px"
-								height="23px"
-								display="flex"
-								justifyContent="center"
-								alignItems="center"
-								backgroundColor="#3EC6E0"
-								borderRadius="50%"
-								marginLeft=".2rem"
-								position={width <= 700 ? 'absolute' : undefined}
-								left="65%"
-							>
-								<Text weight="900">{store}</Text>
-							</Box>
-						)}
-					</Box>
-				</SpaceTwo>
+				)}
 			</Content>
 			<ContainerMenu ref={containerMenu}>
 				<ContentMenu animation={isMenu}>
