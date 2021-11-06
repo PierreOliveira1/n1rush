@@ -8,7 +8,7 @@ import Logo from '../../assets/img/logo_header 1.png';
 
 const Footer = (): JSX.Element => {
 	return (
-		<Box width="100%" display="flex">
+		<Box width="100%" display="flex" marginTop="5%">
 			<Box
 				width="30%"
 				height="50px"
