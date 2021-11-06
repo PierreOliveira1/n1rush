@@ -213,7 +213,7 @@ const Header = (): JSX.Element => {
 					{width > 800 && <Line height="30px" />}
 					<Box display="flex" alignItems="flex-end" position="relative">
 						<Button type="icon" icon={IconStore} />
-						{store && (
+						{store !== 0 && (
 							<Box
 								width="23px"
 								height="23px"

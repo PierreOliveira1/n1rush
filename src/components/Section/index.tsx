@@ -109,7 +109,7 @@ const Section = (): JSX.Element => {
 				justifyContent="center"
 				alignItems={width < 1100 ? 'center' : 'flex-start'}
 				flexDirection={width > 1100 ? 'row' : 'column'}
-				marginTop={width > 1000 ? '-10%' : '10%'}
+				marginTop={width > 1000 ? '-10%' : '17%'}
 			>
 				{cards.map(({ name, image }, index) => (
 					<Card
