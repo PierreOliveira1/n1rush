@@ -1,3 +1,6 @@
+# View website
+https://n1rush-rho.vercel.app/
+
 # Attention!
 Before starting the project with Yarn Start you need to create a .env file written SKIP_PREFLIGHT_CHECK=true so you do not give errors.
 
