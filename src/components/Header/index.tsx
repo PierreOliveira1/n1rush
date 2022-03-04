@@ -29,7 +29,7 @@ import Modal from '../Modal';
 
 // Assets
 import IconMenu from '../../assets/svgs/icon_hamburguer.svg';
-import Logo from '../../assets/img/Logo.png';
+import Logo from '../../assets/img/Logo.webp';
 import IconContact from '../../assets/svgs/paper-plane.svg';
 import IconSearch from '../../assets/svgs/search-solid.svg';
 import IconStore from '../../assets/svgs/shopping-bag-solid.svg';

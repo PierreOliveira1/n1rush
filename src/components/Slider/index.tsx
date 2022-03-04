@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // Assets
-import BannerDesktop1 from '../../assets/img/principal_banner_desktop.jpg';
-import BannerDesktop2 from '../../assets/img/principal_banner_desktop_02.jpg';
-import BannerMobile1 from '../../assets/img/principal_banner_mobile.jpg';
-import BannerMobile2 from '../../assets/img/principal_banner_mobile_02.jpg';
+import BannerDesktop1 from '../../assets/img/principal_banner_desktop.webp';
+import BannerDesktop2 from '../../assets/img/principal_banner_desktop_02.webp';
+import BannerMobile1 from '../../assets/img/principal_banner_mobile.webp';
+import BannerMobile2 from '../../assets/img/principal_banner_mobile_02.webp';
 import IconArrowLeft from '../../assets/svgs/angle-left-solid.svg';
 import IconArrowRight from '../../assets/svgs/angle-right-solid.svg';
 

@@ -9,12 +9,12 @@ import Card from '../Card';
 import Button from '../Button';
 
 // Assets
-import ImageZelda from '../../assets/img/zelda_banner.jpg';
-import ImageSekiro from '../../assets/img/sekiro_banner.jpg';
+import ImageZelda from '../../assets/img/zelda_banner.webp';
+import ImageSekiro from '../../assets/img/sekiro_banner.webp';
 import IconProducts from '../../assets/svgs/icon_products.svg';
-import Outriders from '../../assets/img/product-outriders.png';
-import Cyberpunk from '../../assets/img/product-cyberpunk2077.png';
-import DonkeyKong from '../../assets/img/product-donkey-kong-country-tropical-freeze.png';
+import Outriders from '../../assets/img/product-outriders.webp';
+import Cyberpunk from '../../assets/img/product-cyberpunk2077.webp';
+import DonkeyKong from '../../assets/img/product-donkey-kong-country-tropical-freeze.webp';
 import ArrowLeft from '../../assets/svgs/angle-left-black.svg';
 import ArrowRight from '../../assets/svgs/angle-right-black.svg';
 import Mario from '../../assets/svgs/image_6-removebg-preview 1.svg';

@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Image, Text } from '../../styles';
 
 // Assets
-import Logo from '../../assets/img/logo_header 1.png';
+import Logo from '../../assets/img/logo_header 1.webp';
 
 const Footer = (): JSX.Element => {
 	return (
